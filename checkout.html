@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - THE TRAIL TALES</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #f9f5f0, #f0e8e0);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2e1d24;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      font-family: 'Garamond', serif;
+      letter-spacing: 2px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #e0c0d0;
+    }
+
+    .checkout-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffffffd5;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkout-container h2 {
+      text-align: center;
+      color: #2e1d24;
+    }
+
+    #checkout-items {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    #checkout-items li {
+      margin: 8px 0;
+      padding-bottom: 6px;
+      border-bottom: 1px dashed #bbb;
+    }
+
+    #checkout-total {
+      font-size: 20px;
+      color: #2e1d24;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #69375d;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4a2b42;
+    }
+
+    footer {
+      background: linear-gradient(to right, #3b2542, #6e4d5e);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">THE TRAIL TALES</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="checkout-container">
+    <h2>Checkout</h2>
+    <ul id="checkout-items"></ul>
+    <p><strong>Total:</strong> ₹<span id="checkout-total">0</span></p>
+    <button onclick="placeOrder()">Place Order</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 THE TRAIL TALES. All rights reserved.</p>
+    <p>Contact: trailtales@example.com | +91-9876543210</p>
+  </footer>
+
+  <script>
+    const checkoutItems = document.getElementById('checkout-items');
+    const checkoutTotal = document.getElementById('checkout-total');
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function renderCheckout() {
+      checkoutItems.innerHTML = '';
+      let total = 0;
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - ${item.size}ml - ₹${item.price}`;
+        checkoutItems.appendChild(li);
+        total += item.price;
+      });
+      checkoutTotal.textContent = total;
+    }
+
+    function placeOrder() {
+      alert("Order Placed Successfully!");
+      localStorage.removeItem('cart');
+      cart = [];
+      renderCheckout();
+    }
+
+    renderCheckout();
+  </script>
+  <div id="toast">Order Placed Successfully!</div>
+
+
+</body>
+</html>

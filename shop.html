@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE TRAIL TALES</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">THE TRAIL TALES</div>
+    <img src="WhatsApp_Image_2025-05-07_at_3.59.17_PM__1_-removebg-preview.png" alt="The Trail Tales logo" class="header-logo" height="200px">
+    <nav>
+      <ul>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+        <li><a href="#about-section">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Discover Your Signature Scent</h1>
+    <p>Explore our curated collection of luxurious fragrances.</p>
+  </section>
+
+  <section id="shop" class="product-grid">
+
+    <!-- Perfume Cards -->
+    <div class="product-card">
+      <img src="woodpecker.jpeg" alt="Woodpecker">
+      <h3>Woodpecker</h3>
+      <p><em>Key Notes:</em> Lemon, Mint, Pink Pepper, Citrus</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Woodpecker', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Woodpecker', 100, 1000)">Add 100ml</button>
+    </div>
+
+    <div class="product-card">
+      <img src="aangan.jpeg" alt="Aangan">
+      <h3>Aangan</h3>
+      <p><em>Key Notes:</em> Turquoise Rose, Oudh, Mint</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Aangan', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Aangan', 100, 1000)">Add 100ml</button>
+    </div>
+
+    <div class="product-card">
+      <img src="blush you.jpeg" alt="Blush You">
+      <h3>Blush You</h3>
+      <p><em>Key Notes:</em> Orange Blossom, Bitter Orange, Tuberose, Madagascar Vanilla, Sandalwood</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Blush You', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Blush You', 100, 1000)">Add 100ml</button>
+    </div>
+
+    <div class="product-card">
+      <img src="dastaan.jpeg" alt="Dastaan">
+      <h3>Dastaan</h3>
+      <p><em>Key Notes:</em> Calabrian Pink Pepper, Bergamot, Sichuan Pepper, Clove, Vanilla</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Dastaan', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Dastaan', 100, 1000)">Add 100ml</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bambi.jpeg" alt="Bambi">
+      <h3>Bambi</h3>
+      <p><em>Key Notes:</em> Pear Blossom, Red Berries, Italian Mandarin, Gardenia</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Bambi', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Bambi', 100, 1000)">Add 100ml</button>
+    </div>
+
+    <div class="product-card">
+      <img src="lil miss perfect.jpeg" alt="Lil Miss Perfect">
+      <h3>Lil Miss Perfect</h3>
+      <p><em>Key Notes:</em> Peach, Pineapple, Bergamot, Musk, Apple, Patchouli</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Lil Miss Perfect', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Lil Miss Perfect', 100, 1000)">Add 100ml</button>
+    </div>
+
+    <div class="product-card">
+      <img src="chocolate.jpeg" alt="Chocolate">
+      <h3>Chocolate</h3>
+      <p><em>Key Notes:</em> Vanilla, Dark Chocolate, Mint</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Chocolate', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Chocolate', 100, 1000)">Add 100ml</button>
+    </div>
+
+    <div class="product-card">
+      <img src="sea and sky.jpeg" alt="Sea and Sky">
+      <h3>Sea and Sky</h3>
+      <p><em>Key Notes:</em> Green Tea, Orchid and Persia, Musk, Patchouli</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Sea and Sky', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Sea and Sky', 100, 1000)">Add 100ml</button>
+    </div>
+
+    <div class="product-card">
+      <img src="cuban.jpeg" alt="Cuban">
+      <h3>Cuban</h3>
+      <p><em>Key Notes:</em> Lemon, Pear, Bay Leaf, Tobacco, Marigold</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Cuban', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Cuban', 100, 1000)">Add 100ml</button>
+    </div>
+
+    <div class="product-card">
+      <img src="day dreamer.jpeg" alt="Day Dreamer">
+      <h3>Day Dreamer</h3>
+      <p><em>Key Notes:</em> Orange, Apple, Amber, Musk</p>
+      <p>50ml - ₹500 | 100ml - ₹1000</p>
+      <button onclick="addToCart('Day Dreamer', 50, 500)">Add 50ml</button>
+      <button onclick="addToCart('Day Dreamer', 100, 1000)">Add 100ml</button>
+    </div>
+  </section>
+
+  <section id="cart" class="cart-modal">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: ₹<span id="cart-total">0</span></p>
+    <a href="checkout.html">Go To Cart</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 THE TRAIL TALES. All rights reserved.</p>
+    <div class="footer-about" id="about-section">
+      <h3>About</h3>
+      <p><strong>Founded By:</strong> Divya Acharya</p>
+      <p><strong>Contact No.:</strong> 7758038388</p>
+      <p><strong>Email:</strong> <a href="mailto:thetrailtales@gmail.com">thetrailtales@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    updateCartUI();
+
+    function addToCart(name, size, price) {
+      const existing = cart.find(item => item.name === name && item.size === size);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, size, price, quantity: 1 });
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const cartCount = document.getElementById("cart-count");
+      const cartItems = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+
+      cartItems.innerHTML = "";
+      let total = 0;
+      let count = 0;
+
+      cart.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} (${item.size}ml) x${item.quantity} - ₹${item.price * item.quantity}`;
+        cartItems.appendChild(li);
+        total += item.price * item.quantity;
+        count += item.quantity;
+      });
+
+      cartTotal.textContent = total;
+      cartCount.textContent = count;
+    }
+  </script>
+</body>
+</html>
